@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header{
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg);
+    height: 100vh;
+}
+
+/*------------------------------------------------------------------------------ Navbar,Hero Section----------------------------------------------------------------------------------*/
+
+
+nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+nav ul li{
+    display: inline-block;
+    padding: 10px;
+}
+
+nav ul li a{
+    line-height: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+nav img{
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+
+ }
+
+.checkButton{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.mycheckBox{
+    display: none;
+}
+
+
+.container {
+    height: 600px;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+.container img {
+    width: 50%;
+    height: 500px;
+    animation: animName 2s linear 
+  }
+
+  @keyframes animName {
+    0%{
+       transform: rotate(0deg);
+      }
+   100%{
+       transform: rotate(360deg);
+      }
+   }
+  .hero-text {
+    width: 80%;
+  }
+  
+  .hero-text h1 {
+    font-size: 3.3rem;
+    margin-bottom: 12px;
+    color: white;
+  }
+  
+  .hero-text p {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: white;
+  }
+  
+  button {
+    padding: 1em 2.1em 1.1em;
+    border-radius: 4px;
+    margin: 8px;
+    border: none;
+    background-color: #fea116;
+    color: #000000;
+    font-weight: 800;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0em -0.2rem 0em #fea116 inset;
+    transition: color 3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: transparent;
+    color: #fea116;
+    border: 3px solid #fea116;
+    cursor: pointer;
+  }
+  
+
+
+
+
+@media screen and (max-width:1500px){
+    .checkButton{
+        display: block;
+    }
+
+    ul{
+        position: absolute;
+        width: 100%;
+        
+        background-color: #fea116;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        color: black;
+    }
+
+    a:hover,a.active{
+        color: white;
+    }
+
+    .mycheckBox:checked ~ ul{
+        left: 0;
+    }
+}
+
+@media screen and (max-width:1500px){
+    .container {
+        margin-top: 10px;
+        flex-direction: column;
+      }
+      .hero-text {
+        width: 100%;
+        text-align: center;
+      }
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+}
+
+
+
+
+@media (max-width: 1500px) {
+    .container img {
+      width: 25%;
+      height: 300px;
+    } 
+    
+    .hero-text h1 {
+
+      font-size: 3rem;
+    }
+
+    
+}
+
+    
+@media (max-width: 678px) {
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  }
+
+  /*------------------------------------------------------------------------------ Services----------------------------------------------------------------------------------*/
+
+
+.cards{
+ display: grid;
+ grid-template-columns: auto auto auto auto;
+ gap: 10px;
+ padding: 30px;
+ }
+
+ .cards .g{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 20%;
+  
+ }
+
+ .g i{
+  font-size: 2rem;
+  color: #fea116;
+ }
+
+ .cards .g:hover{
+  background: #fea116;
+  color: #000000;
+ }
+
+ /*------------------------------------------------------------------------------ About----------------------------------------------------------------------------------*/
+
+
+ 
+ .about{
+  justify-content: space-around;
+  align-items: center;
+ }
+ .about-img img{
+  width: 50%;
+  height: 50vh;
+  margin: 0px 20px;
+ }
+
+ .about{
+  display: flex;
+  justify-content: space-evenly;
+ }
+
+ .about-content{
+  margin: 50px;
+  padding: 30px;
+ }
+ 
+ .about-content h2 i{
+  color: #fea116;
+  font-weight: bolder;
+ }
+
+ .about-content h2{
+  padding: 10px 1px;
+ }
+
+ @media screen and (max-width: 1300px) {
+  
+
+  
+  
+ }
+
+ @media screen and (max-width:700px) {
+  .about-content{
+    margin-top: 10px;
+  }
+  .about-img img{
+    width: 100%;
+    height: 25vh;
+   }
+}
+
+
+/*------------------------------------------------------------------------------ Menu----------------------------------------------------------------------------------*/
+
+.sec{
+  width: 100%;
+  
+  
+  
+}
+
+.food-menu{
+ text-align: center;
+ align-items: center;
+ justify-content: center;
+}
+
+.food-menu h6{
+  font-size: 20px;
+  margin: 10px 0px;
+  color: #fea116;
+  font-family: brush script mt, cursive;
+}
+
+.food-menu h2{
+  font-size: 2rem;
+  color: #fea116;
+  font-family: georgia;
+
+}
+
+.menu-item{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 10px;
+  font-weight: bolder;
+}
+
+.menu-item i{
+  color: #ff9b06;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 1% 10px;
+  
+ 
+}
+
+.card-image {
+  width: 100%;
+  height: 50vh;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.card-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+  }
+
+  .card-image {
+    width: 50%;
+    height: 25vh;
+  }
+
+  .card-content {
+    width: 50%;
+  }
+}
+
+/*------------------------------------------------------------------------------ Footer----------------------------------------------------------------------------------*/
+
+footer{
+  
+}
+.contact{
+  background-color: #ff9b06;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+  
+}
+
+.contact p{
+  margin: 10px;
+}
+
+.contact p i{
+  margin: 10px;
+}
+
+
+
+
